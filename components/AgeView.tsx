@@ -9,9 +9,7 @@ export default function AgeView() {
          return state.ageReducer.age
       }
    )
-   return (
-      <View style={{ flex: 1, marginTop: 300 }}>
+   return <View style={{ flex: 1, marginTop: 300 }}>
          <Text >Your Age {age}</Text>
       </View>
-   )
 }

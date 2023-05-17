@@ -11,9 +11,8 @@ export default function AgeControl() {
       return state.ageReducer.age
    })
    console.log({ age })
-   return (
-      <View style={{ flex: 1 }}>
-
+   return <View style={{ flex: 1 }}>
+      <View style={{ margin: 5, padding: 5 }}>
          <Button
             title='Age Up'
             onPress={
@@ -24,8 +23,12 @@ export default function AgeControl() {
                )
             }
          />
+      </View>
+      <View style={{ margin: 5, padding: 5 }}>
+
          <Button
             title='Age Down'
+
             onPress={
                () => dispatch(
                   {
@@ -34,5 +37,5 @@ export default function AgeControl() {
                )
             } />
       </View>
-   )
+   </View>
 }

@@ -5,18 +5,12 @@ import store from './store'
 import AgeView from './components/AgeView'
 
 export default function App() {
-
-  return (
+  return <Provider store={store}>
     <View style={styles.container}>
-      <Provider store={store}>
-        <View style={styles.container}>
-          <AgeView />
-          <AgeControl />
-        </View>
-      </Provider>
-
+      <AgeView />
+      <AgeControl />
     </View>
-  )
+  </Provider>
 }
 
 const styles = StyleSheet.create({

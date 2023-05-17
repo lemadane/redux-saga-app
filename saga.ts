@@ -7,7 +7,7 @@ function* ageUpAsync() {
 }
 
 function* ageDownAsync() {
-   yield delay(3000);
+   yield delay(4000);
    yield put({ type: ActionType.AGE_DOWN_ASYNC, payload: 1 });
 }
 
