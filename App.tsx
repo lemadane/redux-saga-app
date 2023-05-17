@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native'
+import { Provider } from 'react-redux'
+import AgeControl from './components/AgeControl'
+import store from './store'
+import AgeView from './components/AgeView'
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Provider store={store}>
+        <View style={styles.container}>
+          <AgeView />
+          <AgeControl />
+        </View>
+      </Provider>
+
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,4 +26,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
